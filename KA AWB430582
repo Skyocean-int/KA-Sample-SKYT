@@ -1,0 +1,141 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld",
+    {
+      "wco": "https://wcoomd.org/en/topics/facilitation/instruments-and-tools/wco-data-model.aspx",
+      "unipass": "http://external.unipassghana.com/schemas/",
+      "intra": "https://customs.us.gov/schemas/",
+      "skyocean": "https://skyocean.platform/schemas/"
+    }
+  ],
+  "@type": "skyocean:TradeTransaction",
+  "@id": "did:dkg:skyocean:transaction:AWB430582",
+  "skyocean:UAL": "did:dkg:skyocean:transaction:AWB430582",
+  "skyocean:transactionType": "Export",
+  "skyocean:transactionStatus": "InTransit",
+  "skyocean:contractNumber": "0xPolygonSmartContract123",
+  "skyocean:originCountry": {
+    "@type": "Country",
+    "countryCode": "US",
+    "countryName": "United States"
+  },
+  "skyocean:destinationCountry": {
+    "@type": "Country",
+    "countryCode": "GH",
+    "countryName": "Ghana"
+  },
+  "skyocean:commodity": {
+    "@type": "Product",
+    "productName": "Aviation Parts",
+    "productDescription": "Cooling Turbine and Regulator Press Diff",
+    "quantity": "2 items",
+    "weight": "54 kg",
+    "hsCode": "392122",
+    "price": "185,250 USD",
+    "serialNumbers": [
+      {
+        "partNumber": "571925-3-1",
+        "serialNumber": "85-1436",
+        "description": "Cooling Turbine"
+      },
+      {
+        "partNumber": "392122-1-1",
+        "serialNumbers": ["P-1172", "61489", "S3369H1", "P-3296", "73085", "P-11013", "P-1156", "P-3265", "P3463", "P-3792", "P-4988"],
+        "description": "Regulator Press Diff"
+      }
+    ]
+  },
+  "skyocean:shipmentDetails": {
+    "@type": "Shipment",
+    "shipmentId": "WES430582",
+    "airportOfDeparture": "Miami International Airport",
+    "airportOfArrival": "Accra Kotoka Airport",
+    "carrier": "Qatar Airways",
+    "status": "InTransit",
+    "flightDetails": {
+      "flightNumber": "778",
+      "departureDate": "2024-10-25",
+      "arrivalEstimate": "2024-10-30"
+    }
+  },
+  "skyocean:customsClearance": {
+    "@type": "intra:CustomsClearance",
+    "intra:customsDeclarationNumber": "157-39761470",
+    "intra:exportControl": "Compliance with Export Administration Regulations",
+    "intra:destinationCountry": "GH",
+    "unipass:ucrNumber": "UCRGH987654",
+    "unipass:customsStatus": "Pending"
+  },
+  "skyocean:documents": [
+    {
+      "@type": "DigitalDocument",
+      "documentType": "AirWaybill",
+      "documentNumber": "AWB430582",
+      "documentUrl": "https://drive.google.com/file/d/1-2Van5nYTvCtqrgon7EUt-TcQwDaMeFX/view?usp=sharing",
+      "skyocean:UAL": "did:dkg:skyocean:document:AWB430582"
+    },
+    {
+      "@type": "DigitalDocument",
+      "documentType": "CommercialInvoice",
+      "documentNumber": "1515",
+      "documentUrl": "https://drive.google.com/file/d/1-DxQvZIV5QdBsd66EoZKZWj_y-S_xAnf/view?usp=sharing",
+      "skyocean:UAL": "did:dkg:skyocean:document:INV1515",
+      "invoiceDate": "2024-10-15",
+      "totalAmount": "185,250 USD",
+      "paymentTerms": "Prepaid"
+    },
+    {
+      "@type": "DigitalDocument",
+      "documentType": "PackingList",
+      "documentNumber": "1515",
+      "documentUrl": "https://drive.google.com/file/d/1-7Eg2khEAH21JzGZohewbQ7M0U65pYA1/view?usp=sharing",
+      "skyocean:UAL": "did:dkg:skyocean:document:PL1515",
+      "items": [
+        {
+          "partNumber": "571925-3-1",
+          "description": "Cooling Turbine",
+          "quantity": 1,
+          "serialNumber": "85-1436"
+        },
+        {
+          "partNumber": "392122-1-1",
+          "description": "Regulator Press Diff",
+          "quantity": 1,
+          "serialNumbers": ["P-1172", "61489", "S3369H1", "P-3296", "73085", "P-11013", "P-1156", "P-3265", "P3463", "P-3792", "P-4988"]
+        }
+      ]
+    }
+  ],
+  "skyocean:financialDetails": {
+    "@type": "FinancialTransaction",
+    "transactionId": "FIN789012",
+    "amount": {
+      "@type": "MonetaryAmount",
+      "value": 185250,
+      "currency": "USD"
+    },
+    "paymentTerms": "Prepaid",
+    "paymentStatus": "Pending"
+  },
+  "skyocean:auditTrail": [
+    {
+      "@type": "AuditEvent",
+      "eventType": "OrderCreated",
+      "timestamp": "2024-10-20T10:00:00Z",
+      "performedBy": "did:skyocean:user123"
+    },
+    {
+      "@type": "AuditEvent",
+      "eventType": "ShipmentInitiated",
+      "timestamp": "2024-10-25T10:00:00Z",
+      "performedBy": "did:skyocean:user456"
+    }
+  ],
+  "skyocean:dkgMetadata": {
+    "assetId": "did:dkg:skyocean:transaction:AWB430582",
+    "creationDate": "2024-10-20T10:00:00Z",
+    "lastUpdateDate": "2024-10-25T10:30:00Z",
+    "version": "1.0"
+  }
+}
